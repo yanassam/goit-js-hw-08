@@ -92,6 +92,7 @@ gallery.addEventListener("click", onImageClick);
 let modal = null;
 
 function onImageClick(event) {
+  event.preventDefault();
   if (event.target.nodeName !== "IMG") return;
   // console.log(event.target.getAttribute("data-source"));
   modal = basicLightbox.create(
